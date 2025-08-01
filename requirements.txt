@@ -1,0 +1,4 @@
+streamlit==1.47.1
+numpy==1.26.4
+soundfile==0.13.1
+kokoro==0.9.4
