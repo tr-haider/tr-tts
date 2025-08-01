@@ -6,6 +6,16 @@ import streamlit as st
 from kokoro import KPipeline
 from typing import Tuple, List
 
+import spacy
+from spacy.cli import download
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    download("en_core_web_sm")
+    nlp = spacy.load("en_core_web_sm")
+
+
 # Constants
 audios_directory = './audio/'
 os.makedirs(audios_directory, exist_ok=True)
